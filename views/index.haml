@@ -19,4 +19,5 @@
             by
             %a{href: item['post_url']}= item['blog_name']
           = item['body'].to_s
-  .large-6.columns#editor
+  %form.large-6.columns#editor
+    %textarea
