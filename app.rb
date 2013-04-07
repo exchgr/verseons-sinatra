@@ -2,6 +2,8 @@ require 'sinatra'
 require 'sinatra-websocket'
 require 'sinatra/asset_pipeline'
 require 'sprockets-helpers'
+require 'rest-client'
+require 'json'
 
 set :sockets, []
 register Sinatra::AssetPipeline

@@ -1,2 +1,5 @@
 .large-6.columns#stream
+  - @parsed['response'].each do |item|
+    %h1= item['title']
+    = item['body'].to_s
 .large-6.columns#editor
