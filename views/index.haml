@@ -1,5 +1,13 @@
 .large-6.columns#stream
   - @parsed['response'].each do |item|
-    %h1= item['title']
-    = item['body'].to_s
+    %article
+      - if item['type'] == 'text'
+        - unless item['title'].nil? or item['title'].empty?
+          %h1= item['title']
+        - else
+          %h1 Untitled
+        %h6
+          by
+          %a{href: item['post_url']}= item['blog_name']
+        = item['body'].to_s
 .large-6.columns#editor
