@@ -1,6 +1,12 @@
 //@import 'bootstrap';
 //@import 'bootstrap-responsive';
 
+#stream, #editor {
+    border: 1px solid #ddd;
+    background: #eee;
+    height: 100%;
+}
+
 article {
     margin-bottom: 3em;
 

@@ -2,7 +2,7 @@
 %head
   - %w(application.css /foundation/css/foundation.min.css).each do |sheet|
     = stylesheet_tag "#{sheet}"
-  - %w(application.js http://code.jquery.com/jquery-1.9.1.min.js).each do |js|
+  - %w(http://code.jquery.com/jquery-1.9.1.min.js application.js).each do |js|
     = javascript_tag "#{js}"
 %body
   %header.top-bar
