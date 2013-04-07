@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'thin'
+gem 'sinatra-websocket'
+gem 'sinatra-asset-pipeline'
+gem 'sprockets-helpers', '~> 1.0.0'
+gem 'sass'
+gem 'coffee-script'
+gem 'haml'

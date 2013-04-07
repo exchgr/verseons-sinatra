@@ -1,0 +1,14 @@
+!!!
+%head
+  - %w(application.css /foundation/css/foundation.min.css).each do |sheet|
+    = stylesheet_tag "#{sheet}"
+  - %w(application.js http://code.jquery.com/jquery-1.9.1.min.js).each do |js|
+    = javascript_tag "#{js}"
+%body
+  %header.top-bar
+    %ul.title-area
+      %li.name
+        %h1
+          %a{href: "/"} Verseons
+  .row
+    = yield
