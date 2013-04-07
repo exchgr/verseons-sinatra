@@ -14,6 +14,9 @@ get '/' do
   if request.websocket?
     # do some shit
   else
+    url = 'http://api.tumblr.com/v2/tagged?tag=poetry&api_key=BZ9B9jwlNu5TomackdGqorvMjMz7mJF8kDl8osWpeM8RnO9KTf'
+    response = RestClient.get(url)
+    @parsed = JSON.parse(response)
     haml :index
   end
 end
