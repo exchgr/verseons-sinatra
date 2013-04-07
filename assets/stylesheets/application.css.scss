@@ -7,6 +7,26 @@
     display: -webkit-box;
 }
 
+#instructions {
+    position: absolute;
+    top: 400px;
+    left: 35%;
+    z-index: 10;
+    width: 400px;
+    font-family: "Mrs Sheppards";
+    font-size: xx-large;
+    text-align: center;
+
+    img {
+    }
+}
+
+header.row {
+    h1 {
+        text-align: center;
+    }
+}
+
 .flex {
     @include flex;
 }
