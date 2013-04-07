@@ -1,13 +1,19 @@
-.large-6.columns#stream
-  - @parsed['response'].each do |item|
-    %article
+.row
+  .large-6.columns
+    %h1 Poetry stream
+  .large-6.columns
+    %h1 Your poem
+.row.flex
+  .large-6.columns#stream
+    - @parsed['response'].each do |item|
       - if item['type'] == 'text'
-        - unless item['title'].nil? or item['title'].empty?
-          %h1= item['title']
-        - else
-          %h1 Untitled
-        %h6
-          by
-          %a{href: item['post_url']}= item['blog_name']
-        = item['body'].to_s
-.large-6.columns#editor
+        %article{title: item['title'], url: item['post_url'], author: item['blog_name']}
+          - unless item['title'].nil? or item['title'].empty?
+            %h1= item['title']
+          - else
+            %h1 Untitled
+          %h6
+            by
+            %a{href: item['post_url']}= item['blog_name']
+          = item['body'].to_s
+  .large-6.columns#editor
