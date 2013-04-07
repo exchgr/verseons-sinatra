@@ -2,7 +2,7 @@
 %head
   - %w(application.css /foundation/css/foundation.min.css http://fonts.googleapis.com/css?family=Mrs+Sheppards).each do |sheet|
     = stylesheet_tag "#{sheet}"
-  - %w(http://code.jquery.com/jquery-1.9.1.min.js application.js).each do |js|
+  - %w(http://code.jquery.com/jquery-1.9.1.min.js application.js /wysihtml5/parser_rules/advanced.js /wysihtml5/dist/wysihtml5-0.3.0.min.js).each do |js|
     = javascript_tag "#{js}"
 %body
   %header.top-bar

@@ -20,4 +20,19 @@
             %a{href: item['post_url']}= item['blog_name']
           = item['body'].to_s
   %form.large-6.columns#editor
-    %textarea
+    #wysihtml5-toolbar{:style => "display: none;"}
+      %a{"data-wysihtml5-command" => "bold"} bold
+      %a{"data-wysihtml5-command" => "italic"} italic
+      / Some wysihtml5 commands require extra parameters
+      %a{"data-wysihtml5-command" => "foreColor", "data-wysihtml5-command-value" => "red"} red
+      %a{"data-wysihtml5-command" => "foreColor", "data-wysihtml5-command-value" => "green"} green
+      %a{"data-wysihtml5-command" => "foreColor", "data-wysihtml5-command-value" => "blue"} blue
+      / Some wysihtml5 commands like 'createLink' require extra paramaters specified by the user (eg. href)
+      %a{"data-wysihtml5-command" => "createLink"} insert link
+      %div{"data-wysihtml5-dialog" => "createLink", :style => "display: none;"}
+        %label
+          Link:
+          %input.text{"data-wysihtml5-dialog-field" => "href", :value => "http://"}/
+        %a{"data-wysihtml5-dialog-action" => "save"} OK
+        %a{"data-wysihtml5-dialog-action" => "cancel"} Cancel
+    %textarea#wysihtml5-textarea
