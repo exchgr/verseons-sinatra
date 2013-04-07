@@ -1,7 +1,11 @@
 //@import 'bootstrap';
 //@import 'bootstrap-responsive';
 
-article h1 {
-    margin-bottom: .125em;
-    line-height: 1.2;
+article {
+    margin-bottom: 3em;
+
+    h1 {
+        margin-bottom: .125em;
+        line-height: 1.2;
+    }
 }
